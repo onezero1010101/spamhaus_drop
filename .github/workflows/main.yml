@@ -1,6 +1,6 @@
-#on:
-#  schedule:
-#   - cron: "5 * * * *"
+on:
+  schedule:
+   - cron: "5 * * * *"
 #jobs:
 #  build:
 #    runs-on: ubuntu-latest
@@ -10,12 +10,7 @@
 #          fetch-depth: 0
 #      - name: Run bash script
 #        run: bash spamhaus.sh
-on: push
-#jobs:
-#  wget:
-#    runs-on: ubuntu-latest
-#      steps:
-
+#on: push
 jobs:
   run_tests:
     runs-on: ubuntu-20.04
@@ -34,8 +29,3 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v4
       #with:
       #  commit_message: Changed files      
-#    steps:
-#    - name: wget
-#      uses: wei/wget@v1
-#      with:
-#        args: -O drop_v4.json -P /files/ https://www.spamhaus.org/drop/drop_v4.json
