@@ -18,4 +18,4 @@ jobs:
     - name: wget
       uses: wei/wget@v1
       with:
-        args: -O drop_v4.json -P / https://www.spamhaus.org/drop/drop_v4.json
+        args: -O drop_v4.json -P /files/ https://www.spamhaus.org/drop/drop_v4.json
