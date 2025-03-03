@@ -22,10 +22,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run script file
-        run: |
-           chmod +x .spamhaus.sh
-           .spamhaus.sh
-        shell: bash    
+      run: |
+         chmod +x .spamhaus.sh
+         .spamhaus.sh
+      shell: bash
 #    steps:
 #    - name: wget
 #      uses: wei/wget@v1
