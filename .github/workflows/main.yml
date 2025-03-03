@@ -14,8 +14,16 @@ on: push
 jobs:
   wget:
     runs-on: ubuntu-latest
-    steps:
-    - name: wget
-      uses: wei/wget@v1
-      with:
-        args: -O drop_v4.json -P /files/ https://www.spamhaus.org/drop/drop_v4.json
+      steps:
+      - name: run bash
+      - uses: actions/checkout@v2
+      - name: Run script file
+        run: |
+           chmod +x .spamhaus.sh
+           .spamhaus.sh
+        shell: bash    
+#    steps:
+#    - name: wget
+#      uses: wei/wget@v1
+#      with:
+#        args: -O drop_v4.json -P /files/ https://www.spamhaus.org/drop/drop_v4.json
