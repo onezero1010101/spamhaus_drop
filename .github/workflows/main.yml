@@ -1,8 +1,9 @@
 on:
+  push:
   schedule:
   - cron: '*/15 * * * *'
 
-on: push
+#on: push
 jobs:
   run_tests:
     runs-on: ubuntu-20.04
