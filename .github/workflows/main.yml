@@ -19,10 +19,9 @@ on: push
 jobs:
   run_tests:
     runs-on: ubuntu-20.04
-    steps:      
-      - name: run bash
-      - uses: actions/checkout@v2
-      - name: Run script file
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run script file
         run: |
            chmod +x .spamhaus.sh
            .spamhaus.sh
