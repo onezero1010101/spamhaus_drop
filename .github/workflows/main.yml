@@ -11,10 +11,15 @@
 #      - name: Run bash script
 #        run: bash spamhaus.sh
 on: push
+#jobs:
+#  wget:
+#    runs-on: ubuntu-latest
+#      steps:
+
 jobs:
-  wget:
-    runs-on: ubuntu-latest
-      steps:
+  run_tests:
+    runs-on: ubuntu-20.04
+    steps:      
       - name: run bash
       - uses: actions/checkout@v2
       - name: Run script file
