@@ -1,12 +1,21 @@
-on:
-  schedule:
-    - cron: "5 * * * *"
+#on:
+#  schedule:
+#   - cron: "5 * * * *"
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#        with:
+#          fetch-depth: 0
+#      - name: Run bash script
+#        run: bash spamhaus.sh
+on: push
 jobs:
-  build:
+  wget:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Run bash script
-        run: bash spamhaus.sh
+    - name: wget
+      uses: wei/wget@v1
+      with:
+        args: -O drop_v4.json https://www.spamhaus.org/drop/drop_v4.json
